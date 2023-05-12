@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Study Cards Result</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 95vh;
+      margin: 0;
+      background-color: #f8f8f8;
+      padding: 1em;
+    }
+    .study-cards-container {
+      max-height: 80vh;
+      overflow-y: auto;
+      column-count: 5;
+      column-gap: 10px;
+      width: 100%;
+    }
+    .study-card {
+      margin-bottom: 5px;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .study-card p {
+      margin: 0;
+      font-size: 12px;
+      line-height: 1.2;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 5px;
+      border: none;
+      cursor: pointer;
+      margin: 1em;
+    }
+    .buttons-container {
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+    }
+    a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Generated Cards</h1>
+  <div class="study-cards-container">
+    {% for card in study_cards %}
+      <div class="study-card"><p>{{ card }}</p></div>
+    {% endfor %}
+  </div>
+  <div class="buttons-container">
+    <a href="{{ url_for('download_csv') }}">
+      <button>Download CSV</button>
+    </a>
+    <a href="{{ url_for('download_apkg') }}">
+      <button>Download APKG</button>
+    </a>
+  </div>
+  <a href="{{ url_for('index') }}">Back</a>
+</body>
+</html>
