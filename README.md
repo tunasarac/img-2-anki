@@ -18,7 +18,7 @@ To use the Img-2-Anki Web App, follow these steps:
 1. Access the web app by visiting --> [img-2-anki](https://img2anki-i7wnwki2yq-lm.a.run.app).
 2. Choose the source language and target language from the provided options.
 3. Select your current language level.
-4. Upload a series of images containing text.
+4. Upload a series of images containing text. (Good lighting quality is important for ocr to perform proper. Best practice is to scan the pages with phone and then save them as images)
 5. Wait for the images to be processed. This might take some time depending on the number of images uploaded.
 6. Once the processing is complete, the flashcards will be displayed on the screen.
 7. Download the flashcards in the desired format:
@@ -26,8 +26,10 @@ To use the Img-2-Anki Web App, follow these steps:
    - To download as an Anki-compatible APKG file, click on the "Download APKG" button.
    
    **Important Note:** The APKG file follows a specific behavior in Anki. When you import a new APKG file with the same deck_id as a previous deck, Anki will merge the new deck into the existing one. This means that any duplicate words will be removed, keeping only the new words from the second deck. This behavior is intentional to prevent redundancy and keep your study materials up to date.
-
+   
 8. Start studying and reinforcing your vocabulary using the downloaded flashcards.
+
+**No information is being stored, everything gets deleted as the session ends.**
 
 ## Current Limitations
 
